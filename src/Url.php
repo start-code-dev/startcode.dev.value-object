@@ -7,24 +7,21 @@ use Startcode\ValueObject\Interfaces\StringInterface;
 
 class Url implements StringInterface
 {
-    const COLON         = ':';
-    const FORWARD_SLASH = '/';
-    const QUESTION_MARK = '?';
+    public const COLON         = ':';
+    public const FORWARD_SLASH = '/';
+    public const QUESTION_MARK = '?';
 
-    /**
-     * @var string
-     */
-    private $value;
+    private string $value;
 
-    private $port;
+    private ?int $port = null;
 
-    private $path;
+    private ?string $path = null;
 
-    private $query;
+    private ?string $query = null;
 
-    private $scheme;
+    private ?string $scheme = null;
 
-    private $host;
+    private ?string $host = null;
 
     /**
      * Url constructor.
@@ -52,7 +49,7 @@ class Url implements StringInterface
 
     /**
      * @param $values
-     * @return \G4\ValueObject\Url
+     * @return Url
      */
     public function path(...$values): self
     {
@@ -63,18 +60,18 @@ class Url implements StringInterface
 
     /**
      * @param PortNumber $value
-     * @return \G4\ValueObject\Url
+     * @return Url
      */
     public function port(PortNumber $value): self
     {
-        $this->port = $value;
+        $this->port = $value->getValue();
 
         return new self($this->buildUrl());
     }
 
     /**
      * @param Dictionary $values
-     * @return \G4\ValueObject\Url
+     * @return Url
      */
     public function query(Dictionary $values): self
     {
@@ -121,10 +118,10 @@ class Url implements StringInterface
     {
         $urlParts = parse_url($value);
 
-        $this->scheme = isset($urlParts['scheme']) ? $urlParts['scheme'] : '';
-        $this->host   = isset($urlParts['host']) ? $urlParts['host'] : '';
-        $this->port   = isset($urlParts['port']) ? $urlParts['port'] : '';
-        $this->path   = isset($urlParts['path']) ? ltrim($urlParts['path'], self::FORWARD_SLASH) : '';
-        $this->query  = isset($urlParts['query']) ? $urlParts['query'] : '';
+        $this->scheme = isset($urlParts['scheme']) ? $urlParts['scheme'] : null;
+        $this->host   = isset($urlParts['host']) ? $urlParts['host'] : null;
+        $this->port   = isset($urlParts['port']) ? $urlParts['port'] : null;
+        $this->path   = isset($urlParts['path']) ? ltrim($urlParts['path'], self::FORWARD_SLASH) : null;
+        $this->query  = isset($urlParts['query']) ? $urlParts['query'] : null;
     }
 }

@@ -7,48 +7,29 @@ use Startcode\ValueObject\Exception\PathDoesNotExistException;
 class RealPath
 {
 
-    /**
-     * @var string
-     */
-    private $path;
+    private string $path;
 
-    /**
-     * RealPath constructor.
-     * @param array ...$parts
-     * @throws PathDoesNotExistException
-     */
-    public function __construct(...$parts)
+    public function __construct(string ...$parts)
     {
         $this->path = realpath(RelativePath::join($parts));
-        if ($this->path === false) {
+        if (empty($this->path)) {
             throw new PathDoesNotExistException(RelativePath::join($parts));
         }
     }
 
-    /**
-     * @param $onePart
-     * @return RealPath
-     */
-    public function append($onePart): self
+    public function append(string $onePart): self
     {
         return new self($this->path, $onePart);
     }
 
-    /**
-     * @return string
-     */
     public function __toString(): string
     {
         return $this->path;
     }
 
-    /**
-     * @param Pathname $pathname
-     * @return StringLiteral
-     */
     public function diff(RealPath $pathname): StringLiteral
     {
-        $diff = str_replace((string) $pathname, '', $this->__toString());
+        $diff = str_replace((string) $pathname, '', (string) $this);
         return new StringLiteral($diff);
     }
 }

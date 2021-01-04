@@ -4,5 +4,5 @@ namespace Startcode\ValueObject\Interfaces;
 
 interface NumberInterface
 {
-    public function getValue();
+    public function getValue(): int;
 }

@@ -8,14 +8,9 @@ use Startcode\ValueObject\Interfaces\StringInterface;
 class StringLiteral implements StringInterface
 {
 
-    /**
-     * @var string
-     */
-    private $value;
+    private string $value;
 
     /**
-     * StringLiteral constructor.
-     * @param $value string
      * @throws \Exception
      */
     public function __construct($value)
@@ -32,39 +27,22 @@ class StringLiteral implements StringInterface
         return $this->value;
     }
 
-    /**
-     * @param StringInterface $value
-     * @param StringInterface|null $delimiter
-     * @return StringLiteral
-     */
     public function append(StringInterface $value, StringInterface $delimiter = null): self
     {
-        $modified = $this->value . ($delimiter === null ? '' : $delimiter->__toString()) . $value->__toString();
+        $modified = $this->value . ($delimiter === null ? '' : (string) $delimiter) . $value;
         return new StringLiteral($modified);
     }
 
-    /**
-     * @param StringLiteral $value
-     * @return bool
-     */
     public function equals(StringLiteral $value): bool
     {
         return $this->value === $value->__toString();
     }
 
-    /**
-     * @return bool
-     */
     public function isEmpty(): bool
     {
         return strlen($this->value) === 0;
     }
 
-    /**
-     * @param StringLiteral $value
-     * @param StringInterface|null $delimiter
-     * @return StringLiteral
-     */
     public function prepend(StringLiteral $value, StringInterface $delimiter = null): self
     {
         $modified = $value->__toString() . ($delimiter === null ? '' : $delimiter->__toString()) . $this->value;

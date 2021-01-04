@@ -86,7 +86,7 @@ class EmailTest extends PHPUnit_Framework_TestCase
     public function testNullEmail(): void
     {
         $this->expectException(MissingEmailValueException::class);
-        (new Email(null));
+        (new Email(''));
     }
 
     public function testEquals(): void

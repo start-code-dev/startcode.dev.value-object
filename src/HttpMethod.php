@@ -2,66 +2,50 @@
 
 namespace Startcode\ValueObject;
 
-use Startcode\ValueObject\Exception\InvalidHttpMethodException;
-use Startcode\ValueObject\Exception\MissingHttpMethodValueException;
+use Startcode\ValueObject\Exception\{InvalidHttpMethodException, MissingHttpMethodValueException};
 
 class HttpMethod
 {
-    const METHOD_GET        = 'GET';
-    const METHOD_INDEX      = 'INDEX';
-    const METHOD_HEAD       = 'HEAD';
-    const METHOD_POST       = 'POST';
-    const METHOD_PUT        = 'PUT';
-    const METHOD_DELETE     = 'DELETE';
-    const METHOD_CONNECT    = 'CONNECT';
-    const METHOD_OPTIONS    = 'OPTIONS';
-    const METHOD_TRACE      = 'TRACE';
-    const METHOD_PATCH      = 'PATCH';
+    public const METHOD_GET        = 'GET';
+    public const METHOD_INDEX      = 'INDEX';
+    public const METHOD_HEAD       = 'HEAD';
+    public const METHOD_POST       = 'POST';
+    public const METHOD_PUT        = 'PUT';
+    public const METHOD_DELETE     = 'DELETE';
+    public const METHOD_CONNECT    = 'CONNECT';
+    public const METHOD_OPTIONS    = 'OPTIONS';
+    public const METHOD_TRACE      = 'TRACE';
+    public const METHOD_PATCH      = 'PATCH';
+
+    private string $value;
 
     /**
-     * @var string
-     */
-    private $value;
-
-    /**
-     * HttpMethod constructor.
-     * @param $value
      * @throws MissingHttpMethodValueException
      * @throws InvalidHttpMethodException
      */
-    public function __construct($value)
+    public function __construct(string $value)
     {
         if (empty($value)) {
             throw new MissingHttpMethodValueException();
         }
 
-        if (!in_array($value, self::validValues())) {
+        if (!in_array($value, self::validValues(), true)) {
             throw new InvalidHttpMethodException($value);
         }
 
         $this->value = $value;
     }
 
-    /**
-     * @return string
-     */
     public function __toString(): string
     {
         return $this->value;
     }
 
-    /**
-     * @param HttpMethod $value
-     * @return bool
-     */
     public function equals(HttpMethod $value): bool
     {
-        return $this->value === $value->__toString();
+        return $this->value === (string) $value;
     }
 
-    /**
-     * @return array
-     */
     public static function validValues(): array
     {
         return [

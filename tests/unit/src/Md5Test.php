@@ -42,7 +42,7 @@ class Md5Test extends PHPUnit_Framework_TestCase
         $this->expectException(MissingMd5ValueException::class);
         $this->expectExceptionMessage(ErrorMessages::MISSING_MD5_VALUE_MESSAGE);
         $this->expectExceptionCode(ErrorCodes::MISSING_MD5_VALUE);
-        (new Md5(null));
+        (new Md5(''));
     }
 
     public function testSpaceMd5Value()

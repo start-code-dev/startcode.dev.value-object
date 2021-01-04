@@ -32,7 +32,7 @@ class HttpMethodTest extends PHPUnit_Framework_TestCase
         $this->expectException(MissingHttpMethodValueException::class);
         $this->expectExceptionMessage(ErrorMessages::MISSING_HTTP_ERROR_MESSAGE);
         $this->expectExceptionCode(ErrorCodes::MISSING_HTTP_METHOD_VALUE);
-        (new HttpMethod(null));
+        (new HttpMethod(''));
     }
 
     public function testSpaceValue(): void

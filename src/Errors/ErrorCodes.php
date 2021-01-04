@@ -4,15 +4,25 @@ namespace Startcode\ValueObject\Errors;
 
 class ErrorCodes
 {
-    const MISSING_DIRS              = 60001;
-    const INVALID_STRING_LITERAL    = 60002;
-    const INVALID_EMAIL             = 60003;
-    const MISSING_EMAIL_VALUE       = 60004;
-    const INVALID_HTTP_METHOD_VALUE = 60005;
-    const MISSING_HTTP_METHOD_VALUE = 60006;
-    const INVALID_MD5               = 60007;
-    const MISSING_MD5_VALUE         = 60008;
-    const INVALID_INTEGER_NUMBER    = 60009;
-    const INVALID_URL               = 60010;
-    const INVALID_PORT_NUMBER       = 60011;
+    public const MISSING_DIRS              = 60001;
+    public const INVALID_STRING_LITERAL    = 60002;
+    public const INVALID_EMAIL             = 60003;
+    public const MISSING_EMAIL_VALUE       = 60004;
+    public const INVALID_HTTP_METHOD_VALUE = 60005;
+    public const MISSING_HTTP_METHOD_VALUE = 60006;
+    public const INVALID_MD5               = 60007;
+    public const MISSING_MD5_VALUE         = 60008;
+    public const INVALID_INTEGER_NUMBER    = 60009;
+    public const INVALID_URL               = 60010;
+    public const INVALID_PORT_NUMBER       = 60011;
+    public const INVALID_IP                = 60012;
+    public const INVALID_LONGITUDE         = 60013;
+    public const INVALID_LATITUDE          = 60014;
+    public const INVALID_COUNTRY_CODE      = 60015;
+    public const INVALID_CURRENCY_CODE     = 60016;
+    public const INVALID_LOCATION_CODE     = 60017;
+    public const INVALID_PHONE_NUMBER_CODE = 60018;
+    public const INVALID_TIMEZONE_CODE     = 60019;
+    public const INVALID_UUID_CODE         = 60020;
+    public const INVALID_DOMAIN_CODE       = 60021;
 }

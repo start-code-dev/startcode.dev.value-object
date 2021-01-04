@@ -2,8 +2,7 @@
 
 namespace Startcode\ValueObject\Exception;
 
-use Startcode\ValueObject\Errors\ErrorCodes;
-use Startcode\ValueObject\Errors\ErrorMessages;
+use Startcode\ValueObject\Errors\{ErrorCodes, ErrorMessages};
 
 class InvalidUrlException extends \Exception
 {

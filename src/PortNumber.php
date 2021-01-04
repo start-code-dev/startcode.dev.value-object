@@ -2,10 +2,14 @@
 
 namespace Startcode\ValueObject;
 
-use Startcode\ValueObject\Exception\InvalidPortNumberException;
+use Startcode\ValueObject\Exception\{InvalidIntegerNumberException, InvalidPortNumberException};
 
 class PortNumber extends IntegerNumber
 {
+    /**
+     * @throws InvalidPortNumberException
+     * @throws InvalidIntegerNumberException
+     */
     public function __construct($value)
     {
         parent::__construct($value);

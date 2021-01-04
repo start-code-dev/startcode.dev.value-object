@@ -7,36 +7,20 @@ use Startcode\ValueObject\Interfaces\StringInterface;
 class Dictionary
 {
 
-    /**
-     * @var array
-     */
-    private $data;
+    private array $data;
 
-    /**
-     * Dictionary constructor.
-     * @param array $data
-     */
     public function __construct(array $data)
     {
         $this->data = $data;
     }
 
-    /**
-     * @param $key
-     * @param $value
-     * @return $this
-     */
-    public function add($key, $value): self
+    public function add(string $key, string $value): self
     {
         $this->data[$key] = $value;
         return $this;
     }
 
-    /**
-     * @param array ...$keys
-     * @return Dictionary
-     */
-    public function remove(...$keys): self
+    public function remove(string ...$keys): self
     {
         count($keys) > 1
             ?   array_map(function ($key) {
@@ -47,44 +31,30 @@ class Dictionary
         return new self($this->data);
     }
 
-    /**
-     * @return integer
-     */
     public function count(): int
     {
         return count($this->data);
     }
 
-    /**
-     * @return mixed
-     */
     public function current()
     {
         return current($this->data);
     }
 
-    /**
-     * @return int|null|string
-     */
-    public function key()
+    public function key(): ?string
     {
         return key($this->data);
     }
 
-    /**
-     * @param Dictionary $data
-     * @return bool
-     */
     public function equals(Dictionary $data): bool
     {
         return $this->data === $data->getAll();
     }
 
     /**
-     * @param $key
-     * @return mixed|null
+     * @return array|mixed|null
      */
-    public function get($key)
+    public function get(string $key)
     {
         return $this->has($key)
             ? $this->data[$key]
@@ -92,10 +62,9 @@ class Dictionary
     }
 
     /**
-     * @param array ...$keys
      * @return array|mixed|null
      */
-    public function getFromDeeperLevels(...$keys)
+    public function getFromDeeperLevels(string ...$keys)
     {
         $data = $this->data;
         foreach ($keys as $keyIndex => $aKey) {
@@ -109,38 +78,22 @@ class Dictionary
         return $data;
     }
 
-    /**
-     * @param $key
-     * @return bool
-     */
-    public function has($key): bool
+    public function has(string $key): bool
     {
         return array_key_exists($key, $this->data);
     }
 
-    /**
-     * @param $key
-     * @return bool
-     */
-    public function hasNonEmptyValue($key): bool
+    public function hasNonEmptyValue(string $key): bool
     {
         return $this->has($key) && !empty($this->data[$key]);
     }
 
-    /**
-     * @param $key
-     * @return bool
-     */
-    public function hasNotNullValue($key): bool
+    public function hasNotNullValue(string $key): bool
     {
         return $this->has($key) && $this->data[$key] !== null;
     }
 
-    /**
-     * @param array ...$keys
-     * @return bool
-     */
-    public function hasInDeeperLevels(...$keys): bool
+    public function hasInDeeperLevels(string ...$keys): bool
     {
         $data = $this->data;
         $has = false;
@@ -156,38 +109,23 @@ class Dictionary
         return $has;
     }
 
-    /**
-     * @return array
-     */
     public function getAll(): array
     {
         return $this->data;
     }
 
-    /**
-     * @param $keys
-     * @return bool
-     */
-    public function hasKeys($keys): bool
+    public function hasKeys(array $keys): bool
     {
         return !empty(array_filter($keys, function ($key) {
             return $this->has($key);
         }));
     }
 
-    /**
-     * @param $key
-     * @return Dictionary
-     */
-    public function slice($key): self
+    public function slice(string $key): self
     {
         return new self($this->get($key));
     }
 
-    /**
-     * @param Dictionary $data
-     * @return Dictionary
-     */
     public function merge(Dictionary $data): self
     {
         return new self(
@@ -195,22 +133,15 @@ class Dictionary
         );
     }
 
-    /**
-     * @param StringInterface|null $delimiter
-     * @return string
-     */
     public function toString(StringInterface $delimiter = null): string
     {
         if ($delimiter === null) {
-            return join("", $this->data);
+            return implode('', $this->data);
         }
-        return join((string) $delimiter, $this->data);
+        return implode((string) $delimiter, $this->data);
     }
 
-    /**
-     * @param $key
-     */
-    private function removeKey($key): void
+    private function removeKey(string $key): void
     {
         if (array_key_exists($key, $this->data)) {
             unset($this->data[$key]);

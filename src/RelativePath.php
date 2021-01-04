@@ -2,29 +2,20 @@
 
 namespace Startcode\ValueObject;
 
-use Startcode\ValueObject\Exception\MissingDirsException;
+use Startcode\ValueObject\Exception\{MissingDirsException, PathDoesNotExistException};
 use Startcode\ValueObject\Interfaces\StringInterface;
 
 class RelativePath implements StringInterface
 {
 
-    /**
-     * @var array
-     */
-    private $dirs;
+    private array $dirs;
+
+    private ?string $path = null;
 
     /**
-     * @var string
-     */
-    private $path;
-
-
-    /**
-     * RelativePath constructor.
-     * @param array ...$dirs
      * @throws PathDoesNotExistException
      */
-    public function __construct(...$dirs)
+    public function __construct(string ...$dirs)
     {
         if (empty($dirs)) {
             throw new MissingDirsException();
@@ -32,9 +23,6 @@ class RelativePath implements StringInterface
         $this->dirs = $dirs;
     }
 
-    /**
-     * @return string
-     */
     public function __toString(): string
     {
         if ($this->path === null) {
@@ -43,12 +31,8 @@ class RelativePath implements StringInterface
         return $this->path;
     }
 
-    /**
-     * @param array $dirs
-     * @return string
-     */
     public static function join(array $dirs): string
     {
-        return join(DIRECTORY_SEPARATOR, $dirs);
+        return implode(DIRECTORY_SEPARATOR, $dirs);
     }
 }

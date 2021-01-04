@@ -2,24 +2,18 @@
 
 namespace Startcode\ValueObject;
 
-use Startcode\ValueObject\Exception\InvalidMd5Exception;
-use Startcode\ValueObject\Exception\MissingMd5ValueException;
+use Startcode\ValueObject\Exception\{InvalidMd5Exception, MissingMd5ValueException};
 
 class Md5
 {
 
-    /**
-     * @var string
-     */
-    private $value;
+    private string $value;
 
     /**
-     * Md5 constructor.
-     * @param $value
      * @throws MissingMd5ValueException
      * @throws InvalidMd5Exception
      */
-    public function __construct($value)
+    public function __construct(string $value)
     {
         if (empty($value)) {
             throw new MissingMd5ValueException();
@@ -31,28 +25,17 @@ class Md5
         $this->value = $value;
     }
 
-    /**
-     * @return string
-     */
     public function __toString(): string
     {
         return $this->value;
     }
 
-    /**
-     * @param Md5 $value
-     * @return bool
-     */
     public function equals(Md5 $value): bool
     {
         return $this->value === $value->__toString();
     }
 
-    /**
-     * @param $value
-     * @return Md5
-     */
-    public static function calculateMd5($value): self
+    public static function calculateMd5(string $value): self
     {
         return new self(md5($value));
     }
