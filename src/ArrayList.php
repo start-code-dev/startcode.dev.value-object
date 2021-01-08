@@ -14,7 +14,7 @@ class ArrayList
         $this->data = $data;
     }
 
-    public function add(string $value): void
+    public function add($value): void
     {
         $this->data[] = $value;
     }
