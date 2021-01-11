@@ -26,5 +26,5 @@ class ErrorMessages
     public const INVALID_TIMEZONE_MESSAGE       = 'Timezone %s is invalid';
     public const INVALID_UUID_MESSAGE           = 'Uuid %s is invalid';
     public const INVALID_DOMAIN_MESSAGE         = 'Domain %s is invalid';
-
+    public const INVALID_TIMESTAMP_MESSAGE      = 'Timestamp %s is invalid';
 }

@@ -51,6 +51,52 @@ class ArrayList
         return new self($data);
     }
 
+    public function mergeByKey(string $key, ArrayList $arrayList) : array
+    {
+        $tmpData = [];
+        foreach ($this->data as $data) {
+            foreach ($arrayList as $child) {
+                if($data[$key] === $child[$key]) {
+                    $tmpData[] = array_merge($data, $child);
+                }
+            }
+        }
+        return $tmpData;
+    }
+
+    public function addListByKey(string $key, ArrayList $arrayList) : array
+    {
+        $tmpData = [];
+        foreach ($this->data as $data) {
+            foreach ($arrayList as $child) {
+                if($data[$key] === $child[$key]) {
+                    $tmpData[] = array_merge($data, $child);
+                }
+            }
+        }
+        return $tmpData;
+    }
+
+    public function findBy(string $key, $value) : array
+    {
+        $tmpData = [];
+        foreach ($this->data as $data) {
+            if($data[$key] === $value) {
+                $tmpData[] = $data;
+            }
+        }
+        return $tmpData;
+    }
+
+    public function getByDeeperKeys(string $key) : array
+    {
+        $tmpData = [];
+        foreach ($this->data as $data) {
+            $tmpData[] = $data[$key];
+        }
+        return $tmpData;
+    }
+
     public function toString(StringInterface $delimiter = null): string
     {
         if ($delimiter === null) {

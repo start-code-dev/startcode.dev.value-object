@@ -25,4 +25,5 @@ class ErrorCodes
     public const INVALID_TIMEZONE_CODE     = 60019;
     public const INVALID_UUID_CODE         = 60020;
     public const INVALID_DOMAIN_CODE       = 60021;
+    public const INVALID_TIMESTAMP_CODE    = 60022;
 }
