@@ -6,7 +6,7 @@ use Startcode\ValueObject\Md5;
 use Startcode\ValueObject\Exception\InvalidMd5Exception;
 use Startcode\ValueObject\Exception\MissingMd5ValueException;
 
-class Md5Test extends PHPUnit_Framework_TestCase
+class Md5Test extends \PHPUnit\Framework\TestCase
 {
     public function testToString()
     {

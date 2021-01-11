@@ -3,7 +3,7 @@
 use Startcode\ValueObject\RelativePath;
 use Startcode\ValueObject\Exception\MissingDirsException;
 
-class RelativePathTest extends \PHPUnit_Framework_TestCase
+class RelativePathTest extends \PHPUnit\Framework\TestCase
 {
 
     public function testPath(): void

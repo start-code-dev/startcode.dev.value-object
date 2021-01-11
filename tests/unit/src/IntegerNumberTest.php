@@ -3,7 +3,7 @@
 use Startcode\ValueObject\IntegerNumber;
 use Startcode\ValueObject\Exception\InvalidIntegerNumberException;
 
-class IntegerNumberTest extends \PHPUnit_Framework_TestCase
+class IntegerNumberTest extends \PHPUnit\Framework\TestCase
 {
 
     public function testValidInteger(): void

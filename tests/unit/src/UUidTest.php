@@ -3,7 +3,7 @@
 use Startcode\ValueObject\Uuid;
 use Startcode\ValueObject\Exception\InvalidUuidException;
 
-class UUidTest extends \PHPUnit_Framework_TestCase
+class UUidTest extends \PHPUnit\Framework\TestCase
 {
 
     public function testWithValidUuid()
@@ -23,6 +23,6 @@ class UUidTest extends \PHPUnit_Framework_TestCase
     public function testGenerate()
     {
         $anUuid = Uuid::generate();
-        $this->isInstanceOf(Uuid::class, $anUuid);
+        $this->assertInstanceOf(Uuid::class, $anUuid);
     }
 }

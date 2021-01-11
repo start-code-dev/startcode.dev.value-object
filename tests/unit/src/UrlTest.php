@@ -5,7 +5,7 @@ use Startcode\ValueObject\Exception\InvalidUrlException;
 use Startcode\ValueObject\PortNumber;
 use Startcode\ValueObject\Dictionary;
 
-class UrlTest extends \PHPUnit_Framework_TestCase
+class UrlTest extends \PHPUnit\Framework\TestCase
 {
 
     public function testWithValidUrl()

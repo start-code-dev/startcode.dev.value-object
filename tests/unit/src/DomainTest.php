@@ -4,7 +4,7 @@ use Startcode\ValueObject\Domain;
 use Startcode\ValueObject\Exception\InvalidDomainException;
 use Startcode\ValueObject\StringLiteral;
 
-class DomainTest extends \PHPUnit_Framework_TestCase
+class DomainTest extends \PHPUnit\Framework\TestCase
 {
 
 

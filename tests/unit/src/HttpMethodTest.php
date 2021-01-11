@@ -6,7 +6,7 @@ use Startcode\ValueObject\Exception\InvalidHttpMethodException;
 use Startcode\ValueObject\Exception\MissingHttpMethodValueException;
 use Startcode\ValueObject\Errors\ErrorMessages;
 
-class HttpMethodTest extends PHPUnit_Framework_TestCase
+class HttpMethodTest extends \PHPUnit\Framework\TestCase
 {
     public function testToString(): void
     {

@@ -3,7 +3,7 @@
 use Startcode\ValueObject\ArrayList;
 use Startcode\ValueObject\StringLiteral;
 
-class ArrayListTest extends \PHPUnit_Framework_TestCase
+class ArrayListTest extends \PHPUnit\Framework\TestCase
 {
     public function testHas(): void
     {

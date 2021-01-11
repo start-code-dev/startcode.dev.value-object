@@ -6,7 +6,7 @@ use Startcode\ValueObject\Exception\MissingEmailValueException;
 use Startcode\ValueObject\Errors\ErrorMessages;
 use Startcode\ValueObject\Errors\ErrorCodes;
 
-class EmailTest extends PHPUnit_Framework_TestCase
+class EmailTest extends \PHPUnit\Framework\TestCase
 {
     private $validEmails = [
         'email@example.com',

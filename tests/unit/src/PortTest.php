@@ -3,7 +3,7 @@
 use Startcode\ValueObject\PortNumber;
 use Startcode\ValueObject\Exception\InvalidPortNumberException;
 
-class PortTest extends \PHPUnit_Framework_TestCase
+class PortTest extends \PHPUnit\Framework\TestCase
 {
     public function testValidPortNumber()
     {

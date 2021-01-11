@@ -4,7 +4,7 @@ use Startcode\ValueObject\RealPath;
 use Startcode\ValueObject\StringLiteral;
 use Startcode\ValueObject\Exception\PathDoesNotExistException;
 
-class RealPathTest extends \PHPUnit_Framework_TestCase
+class RealPathTest extends \PHPUnit\Framework\TestCase
 {
 //    public function testToString(): void
 //    {

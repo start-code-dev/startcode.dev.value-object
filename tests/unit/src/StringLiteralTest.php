@@ -3,7 +3,7 @@
 use Startcode\ValueObject\StringLiteral;
 use Startcode\ValueObject\Exception\InvalidStringLiteralException;
 
-class StringLiteralTest extends \PHPUnit_Framework_TestCase
+class StringLiteralTest extends \PHPUnit\Framework\TestCase
 {
 
     public function testWithValidString(): void

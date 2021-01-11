@@ -3,7 +3,7 @@
 use Startcode\ValueObject\Ip;
 use Startcode\ValueObject\Exception\InvalidIpException;
 
-class IpTest extends \PHPUnit_Framework_TestCase
+class IpTest extends \PHPUnit\Framework\TestCase
 {
 
     public function testToString()

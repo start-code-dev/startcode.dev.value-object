@@ -3,7 +3,7 @@
 use Startcode\ValueObject\Dictionary;
 use Startcode\ValueObject\StringLiteral;
 
-class DictionaryTest extends \PHPUnit_Framework_TestCase
+class DictionaryTest extends \PHPUnit\Framework\TestCase
 {
 
     public function testHas(): void
@@ -62,7 +62,6 @@ class DictionaryTest extends \PHPUnit_Framework_TestCase
         $aDictionary = new Dictionary([]);
         $this->assertFalse($aDictionary->hasInDeeperLevels('a'));
         $this->assertFalse($aDictionary->hasInDeeperLevels('f', 'b'));
-
     }
 
     public function testGet(): void
@@ -72,7 +71,7 @@ class DictionaryTest extends \PHPUnit_Framework_TestCase
         $this->assertNull($aDictionary->get('b'));
 
         $aDictionary = new Dictionary([]);
-        $this->assertNull(null, $aDictionary->get('a'));
+        $this->assertNull($aDictionary->get('a'));
     }
 
     public function testGetFromDeeperLevels(): void
