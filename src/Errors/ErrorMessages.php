@@ -27,4 +27,7 @@ class ErrorMessages
     public const INVALID_UUID_MESSAGE           = 'Uuid %s is invalid';
     public const INVALID_DOMAIN_MESSAGE         = 'Domain %s is invalid';
     public const INVALID_TIMESTAMP_MESSAGE      = 'Timestamp %s is invalid';
+    public const INVALID_BIRTHDAY_MESSAGE       = 'Birthday %s is invalid';
+    public const INVALID_PROBABILITY_MESSAGE    = 'Probability %s is invalid';
+    public const INVALID_PROBABILITY_OUTCOME    = 'Failed to get outcome from possibilities %s with probability %s';
 }
