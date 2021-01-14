@@ -105,4 +105,57 @@ class ArrayListTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals($data, $anArrayList->getAll());
         $this->assertEquals(['value1', 'value3'], $newArrayList->getAll());
     }
+
+    public function testMergeKey() : void
+    {
+        $aList = new ArrayList([
+            [
+               'name' => 'john',
+               'age'  => 25
+            ],
+            [
+                'name' => 'mike',
+                'age'  => 33
+            ],
+            [
+                'name' => 'sally',
+                'age'  => 28
+            ]
+        ]);
+        $anotherList = new ArrayList([
+            [
+                'name'   => 'sally',
+                'height' => 170
+            ],
+            [
+                'name'   => 'john',
+                'height' => 180
+            ],
+            [
+                'name'   => 'mike',
+                'height' => 190
+            ]
+        ]);
+
+        $this->assertEquals(
+            [
+                [
+                    'name'   => 'john',
+                    'age'    => 25,
+                    'height' => 180
+                ],
+                [
+                    'name' => 'mike',
+                    'age' => 33,
+                    'height' => 190
+                ],
+                [
+                    'name' => 'sally',
+                    'age' => 28,
+                    'height' => 170
+                ]
+            ],
+            $aList->mergeKey('name', $anotherList)->getAll()
+        );
+    }
 }

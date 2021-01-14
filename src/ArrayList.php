@@ -51,6 +51,7 @@ class ArrayList
         return new self($data);
     }
 
+    //TODO remove this method
     public function mergeByKey(string $key, ArrayList $arrayList) : array
     {
         $tmpData = [];
@@ -64,6 +65,7 @@ class ArrayList
         return $tmpData;
     }
 
+    //TODO remove this method
     public function addListByKey(string $key, ArrayList $arrayList) : array
     {
         $tmpData = [];
@@ -95,6 +97,17 @@ class ArrayList
             $tmpData[] = $data[$key];
         }
         return $tmpData;
+    }
+
+    public function mergeKey(string $key, ArrayList $anotherList) : self
+    {
+        $result = [];
+        foreach (array_merge($this->data, $anotherList->getAll()) as $item) {
+            isset($result[$item[$key]])
+                ? $result[$item[$key]] = array_merge($result[$item[$key]], $item)
+                : $result[$item[$key]] = $item;
+        }
+        return new self(array_values($result));
     }
 
     public function toString(StringInterface $delimiter = null): string
