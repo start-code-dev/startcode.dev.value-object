@@ -20,6 +20,12 @@ class Dictionary
         return $this;
     }
 
+    public function addArray(string $key, array $value): self
+    {
+        $this->data[$key] = $value;
+        return $this;
+    }
+
     public function remove(string ...$keys): self
     {
         count($keys) > 1
