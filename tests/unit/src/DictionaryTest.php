@@ -155,6 +155,18 @@ class DictionaryTest extends \PHPUnit\Framework\TestCase
         ], $aDictionary->getAll());
     }
 
+    public function testAddInt(): void
+    {
+        $aDictionary = new Dictionary([
+            'key1' => 'value1'
+        ]);
+        $aDictionary->addInt('key2', 33);
+        $this->assertEquals([
+            'key1' => 'value1',
+            'key2' => 33
+        ], $aDictionary->getAll());
+    }
+
     public function testAddArray(): void
     {
         $aDictionary = new Dictionary([

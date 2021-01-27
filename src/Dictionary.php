@@ -20,6 +20,12 @@ class Dictionary
         return $this;
     }
 
+    public function addInt(string $key, int $value): self
+    {
+        $this->data[$key] = $value;
+        return $this;
+    }
+
     public function addArray(string $key, array $value): self
     {
         $this->data[$key] = $value;
