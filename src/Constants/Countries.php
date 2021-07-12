@@ -37,6 +37,7 @@ class Countries
         'BW' => 'Botswana',
         'BV' => 'Bouvet Island',
         'BR' => 'Brazil',
+        'BQ' => 'Bonaire, Sint Eustatius and Saba',
         'IO' => 'British Indian Ocean Territory',
         'BN' => 'Brunei Darussalam',
         'BG' => 'Bulgaria',
