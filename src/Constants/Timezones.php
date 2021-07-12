@@ -407,6 +407,7 @@ class Timezones
         'Asia/Anadyr' => '(GMT+12:00) Asia/Anadyr (Anadyr Time)',
         'Asia/Kamchatka' => '(GMT+12:00) Asia/Kamchatka (Petropavlovsk-Kamchatski Time)',
         'Pacific/Auckland' => '(GMT+12:00) Pacific/Auckland (New Zealand Standard Time)',
+        'Pacific/Guam' => '(GMT+12:00) Pacific/Guam (Chamorro Standard Time)',
     ];
 
 }
