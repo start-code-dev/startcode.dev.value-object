@@ -133,6 +133,7 @@ class Timezones
         'America/St_Johns' => '(GMT-3:-30) America/St_Johns (Newfoundland Standard Time)',
         'Canada/Newfoundland' => '(GMT-3:-30) Canada/Newfoundland (Newfoundland Standard Time)',
         'America/Araguaina' => '(GMT-3:00) America/Araguaina (Brasilia Time)',
+        'America/Argentina/San_Juan' => '(GMT-3:00) America/Argentina/San_Juan',
         'America/Bahia' => '(GMT-3:00) America/Bahia (Brasilia Time)',
         'America/Belem' => '(GMT-3:00) America/Belem (Brasilia Time)',
         'America/Buenos_Aires' => '(GMT-3:00) America/Buenos_Aires (Argentine Time)',
@@ -407,7 +408,7 @@ class Timezones
         'Asia/Anadyr' => '(GMT+12:00) Asia/Anadyr (Anadyr Time)',
         'Asia/Kamchatka' => '(GMT+12:00) Asia/Kamchatka (Petropavlovsk-Kamchatski Time)',
         'Pacific/Auckland' => '(GMT+12:00) Pacific/Auckland (New Zealand Standard Time)',
-        'Pacific/Guam' => '(GMT+12:00) Pacific/Guam (Chamorro Standard Time)',
+        'Pacific/Guam' => '(GMT+10:00) Pacific/Guam (Chamorro Standard Time)',
     ];
 
 }
