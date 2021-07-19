@@ -8,6 +8,7 @@ class Timezones
     public const ZONES = [
         'America/Adak' => '(GMT-10:00) America/Adak (Hawaii-Aleutian Standard Time)',
         'America/Atka' => '(GMT-10:00) America/Atka (Hawaii-Aleutian Standard Time)',
+        'Pacific/Honolulu' => '(GMT-10:00) Pacific/Honolulu (Hawaii Standard Time)',
         'America/Anchorage' => '(GMT-9:00) America/Anchorage (Alaska Standard Time)',
         'America/Juneau' => '(GMT-9:00) America/Juneau (Alaska Standard Time)',
         'America/Nome' => '(GMT-9:00) America/Nome (Alaska Standard Time)',
@@ -130,6 +131,7 @@ class Timezones
         'Brazil/West' => '(GMT-4:00) Brazil/West (Amazon Time)',
         'Canada/Atlantic' => '(GMT-4:00) Canada/Atlantic (Atlantic Standard Time)',
         'Chile/Continental' => '(GMT-4:00) Chile/Continental (Chile Time)',
+        'America/Indiana/Indianapolis' => '(GMT-4:00) America/Indiana/Indianapolis (Eastern Standard Time)',
         'America/St_Johns' => '(GMT-3:-30) America/St_Johns (Newfoundland Standard Time)',
         'Canada/Newfoundland' => '(GMT-3:-30) Canada/Newfoundland (Newfoundland Standard Time)',
         'America/Araguaina' => '(GMT-3:00) America/Araguaina (Brasilia Time)',
