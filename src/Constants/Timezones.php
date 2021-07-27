@@ -135,6 +135,7 @@ class Timezones
         'America/St_Johns' => '(GMT-3:-30) America/St_Johns (Newfoundland Standard Time)',
         'Canada/Newfoundland' => '(GMT-3:-30) Canada/Newfoundland (Newfoundland Standard Time)',
         'America/Araguaina' => '(GMT-3:00) America/Araguaina (Brasilia Time)',
+        'America/Argentina/Buenos_Aires' => '(GMT-3:00) America/Argentina/Buenos_Aires',
         'America/Argentina/San_Juan' => '(GMT-3:00) America/Argentina/San_Juan',
         'America/Bahia' => '(GMT-3:00) America/Bahia (Brasilia Time)',
         'America/Belem' => '(GMT-3:00) America/Belem (Brasilia Time)',
