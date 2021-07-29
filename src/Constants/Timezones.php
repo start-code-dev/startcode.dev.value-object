@@ -294,6 +294,7 @@ class Timezones
         'Asia/Bahrain' => '(GMT+3:00) Asia/Bahrain (Arabia Standard Time)',
         'Asia/Kuwait' => '(GMT+3:00) Asia/Kuwait (Arabia Standard Time)',
         'Asia/Qatar' => '(GMT+3:00) Asia/Qatar (Arabia Standard Time)',
+        'Asia/Riyadh' => '(GMT+3:00) Asia/Riyadh (Arabia Standard Time)',
         'Europe/Moscow' => '(GMT+3:00) Europe/Moscow (Moscow Standard Time)',
         'Europe/Volgograd' => '(GMT+3:00) Europe/Volgograd (Volgograd Time)',
         'Indian/Antananarivo' => '(GMT+3:00) Indian/Antananarivo (Eastern African Time)',
