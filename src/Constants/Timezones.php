@@ -44,6 +44,7 @@ class Timezones
         'America/Guatemala' => '(GMT-6:00) America/Guatemala (Central Standard Time)',
         'America/Knox_IN' => '(GMT-6:00) America/Knox_IN (Central Standard Time)',
         'America/Managua' => '(GMT-6:00) America/Managua (Central Standard Time)',
+        'America/Matamoros' => '(GMT-6:00) America/Matamoros (Central Standard Time)',
         'America/Menominee' => '(GMT-6:00) America/Menominee (Central Standard Time)',
         'America/Merida' => '(GMT-6:00) America/Merida (Central Standard Time)',
         'America/Mexico_City' => '(GMT-6:00) America/Mexico_City (Central Standard Time)',
