@@ -72,6 +72,7 @@ class Timezones
         'America/Indianapolis' => '(GMT-5:00) America/Indianapolis (Eastern Standard Time)',
         'America/Iqaluit' => '(GMT-5:00) America/Iqaluit (Eastern Standard Time)',
         'America/Jamaica' => '(GMT-5:00) America/Jamaica (Eastern Standard Time)',
+        'America/Kentucky/Louisville' => '(GMT-5:00) America/Kentucky/Louisville (Eastern Standard Time)',
         'America/Lima' => '(GMT-5:00) America/Lima (Peru Time)',
         'America/Louisville' => '(GMT-5:00) America/Louisville (Eastern Standard Time)',
         'America/Montreal' => '(GMT-5:00) America/Montreal (Eastern Standard Time)',
