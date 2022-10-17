@@ -271,6 +271,7 @@ class Timezones
         'Asia/Nicosia' => '(GMT+2:00) Asia/Nicosia (Eastern European Time)',
         'Asia/Tel_Aviv' => '(GMT+2:00) Asia/Tel_Aviv (Israel Standard Time)',
         'Europe/Athens' => '(GMT+2:00) Europe/Athens (Eastern European Time)',
+        'Europe/Kyiv' => '(GMT+2:00) Europe/Kyiv (Eastern European Time)',
         'Europe/Bucharest' => '(GMT+2:00) Europe/Bucharest (Eastern European Time)',
         'Europe/Chisinau' => '(GMT+2:00) Europe/Chisinau (Eastern European Time)',
         'Europe/Helsinki' => '(GMT+2:00) Europe/Helsinki (Eastern European Time)',
