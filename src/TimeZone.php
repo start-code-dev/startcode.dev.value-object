@@ -15,9 +15,6 @@ class TimeZone
      */
     public function __construct(string $value)
     {
-        if (!array_key_exists($value, $this->getAllZones())) {
-            throw new InvalidTimezoneException($value);
-        }
         $this->value = $value;
     }
 
